@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <h1>Just a simple HTML</h1>
+    <p>See the console (F12) to check my studies :)</p>
+    <p>Thanks, Mayk! <a href="https://www.youtube.com/watch?v=ruoHSuTKp-U" target="_blank">Video</a></p>
+    <!-- script inline -->
+    <script> 
+
+    //objeto criado com algumas características
+    const pessoaUm = {
+        nome: 'Guilherme',
+        idade: '19',
+        job: 'JR Developer',
+        game: 'Counter Strike'
+    };
+
+    //const nome// declarando o nome da variável
+    // {nome}   // indica que você vai tirar info de um objeto
+    // pessoaUm   // é o nome do objeto que você está indo buscar as informações
+    const { game } = pessoaUm
+
+    // console.log com a var criada acima
+    console.log(game);
+
+
+
+
+    /* exemplo adicionando na variável */
+    /* exemplo adicionando na variável */
+    
+    const pessoaDois = {
+        nome: 'Clebinho',
+        idade: '15',
+        job: 'jobless',
+        game: 'Minecraft'
+    };
+
+    const { job: trampo } = pessoaDois
+    console.log(trampo);
+
+
+
+
+    /* exemplo criando na variável */
+    /* exemplo criando na variável */
+
+    let jogo;
+
+    const pessoaTres = {
+        nome: 'Renatinho',
+        idade: '7',
+        role: 'Estudante',
+        game: 'Fortnite'
+    };
+
+    ({ game: jogo } = pessoaTres)
+    console.log(jogo);
+
+
+
+
+
+    /* exemplo com arrays */
+    /* exemplo com arrays */
+
+    // declarando a array
+    const empregos = ['Analista', 'Jogador', 'Streamer', 'Ator', 'Cantor'];
+
+    // fazendo a desestruturação
+    // para buscar mais resultados, basta acrescentar nomes e vírgulas dentro do 'p1'
+    const [p1,p2,p3,p4, p5] = empregos;
+    console.log(p3,p5)
+
+
+    /* exemplo com função */
+    /* exemplo com função */
+
+    function chamar({s2}){
+        console.log(s2);
+    }
+
+    const hello = {
+        s1: 'hi',
+        s2: 'hello',
+        s3: 'howdy!'
+    }
+    chamar(hello)
+
+    /* exemplo com função */
+    /* exemplo com função */
+
+    function chamarDenovo([,,s3]){
+        console.log(s3);
+    }
+
+    const grupo = ['hi', 'hello', 'howdy!'];
+    chamarDenovo(grupo)
+
+    </script>
+</body>
+</html>
